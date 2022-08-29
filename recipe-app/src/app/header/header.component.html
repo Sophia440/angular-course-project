@@ -8,8 +8,8 @@
     </div>
     <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
       <ul class="nav navbar-nav">
-        <li routerLinkActive="active"><a [routerLink]="['/recipes']" class="navbar-brand">Recipes</a></li>
-        <li routerLinkActive="active"><a [routerLink]="['/shopping-list']" class="navbar-brand">Shopping list</a></li>
+        <li routerLinkActive="active"><a routerLink="/recipes">Recipes</a></li>
+        <li routerLinkActive="active"><a routerLink="/shopping-list">Shopping List</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown" appDropdown>
@@ -20,8 +20,8 @@
             Manage <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a style="cursor: pointer">Save data</a></li>
-            <li><a style="cursor: pointer">Fetch data</a></li>
+            <li><a style="cursor: pointer" (click)="onSaveData()">Save data</a></li>
+            <li><a style="cursor: pointer" (click)="onFetchData()">Fetch data</a></li>
           </ul>
         </li>
       </ul>
